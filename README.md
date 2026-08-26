@@ -3,9 +3,10 @@
 A Java 21 BlueMap add-on for the exact `railcraft-1.2.10` profile in All the Mons
 `1.2.0` / Minecraft `1.21.1`.
 
-Status: visual-review prototype. The exact artifact gate and BlueMap 5.22
-adapter replace the geometry-free void-chest resource model with a stable,
-closed single-chest mesh and the operator-installed Railcraft texture.
+Status: owner-accepted `0.1.0-alpha.1` release candidate. The exact artifact
+gate and BlueMap 5.22 adapter replace the geometry-free void-chest resource
+model with a stable, closed single-chest mesh and the operator-installed
+Railcraft texture.
 
 ## Build
 
