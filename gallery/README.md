@@ -19,9 +19,12 @@ and no block-entity NBT.
 | Vanilla control | `(180,100,164)` | 1 | north-facing single chest with `waterlogged=false` |
 
 The inclusive clear envelope is x `161..182`, y `99..103`, z `161..170`.
+The build function places a light-gray concrete review platform across the
+envelope at y `99`, keeping both the in-game and BlueMap cameras anchored at
+the fixture height.
 
-The deterministic gallery ZIP is 2,203 bytes with SHA-256
-`468b0a48182d7a8698961063bf78b38f57c3cfbd850b3c9936f1424d57f86fa6`.
+The deterministic gallery ZIP is 2,237 bytes with SHA-256
+`d89af4bcb32d63528fc96c4604f24ebf243e47f9da491cdbd9cdc81616a0edda`.
 
 ## Generate, lint, and package
 
@@ -46,5 +49,6 @@ Minecraft, or BlueMap code, assets, source, or captured meshes.
 /function railcraft_gallery:release
 ```
 
-`build` clears the envelope, places all nine cases, and verifies the exact
-block states. `release` clears only this disposable fixture.
+`build` clears the envelope, places the review platform and all nine cases,
+and verifies the exact block states. `release` clears only this disposable
+fixture.

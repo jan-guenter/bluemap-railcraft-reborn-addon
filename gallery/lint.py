@@ -100,6 +100,13 @@ def main() -> int:
     )
     if len(re.findall(r"^setblock ", build, re.MULTILINE)) != 9:
         raise ValueError("build must place exactly nine audited blocks")
+    platform_commands = re.findall(
+        r"^fill .* minecraft:light_gray_concrete$", build, re.MULTILINE
+    )
+    if platform_commands != [
+        "fill 161 99 161 182 99 170 minecraft:light_gray_concrete"
+    ]:
+        raise ValueError("build must place exactly the bounded review platform")
     if len(re.findall(r"^execute unless block ", verify, re.MULTILINE)) != 9:
         raise ValueError("verify must check exactly nine audited blocks")
     clear_commands = re.findall(r"^fill .* minecraft:air$", clear, re.MULTILINE)
