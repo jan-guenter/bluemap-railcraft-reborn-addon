@@ -1,0 +1,37 @@
+{
+  "artifacts": [
+    {
+      "curseforge_file": 7393678,
+      "curseforge_project": 901491,
+      "download_url": "https://www.curseforge.com/api/v1/mods/901491/files/7393678/download",
+      "evidence": "All the Mons 1.2.0 manifest pins CurseForge 901491/7393678; the runtime JAR is byte-identical to that official download",
+      "evidence_tier": "T2_ARTIFACT_EXACT",
+      "file_name": "railcraft-reborn-1.21.1-1.2.10.jar",
+      "key": "railcraft",
+      "license": "Railcraft Reborn custom license",
+      "mod_id": "railcraft",
+      "redistributed": false,
+      "sha1": "e6bad517eed5d60923b2a0b28d9f7f83d7299f10",
+      "sha256": "7de3dfeac277da57f9897822824332c99e53b9d36956143b38c0966f39144328",
+      "size": 5290986,
+      "version": "1.2.10"
+    }
+  ],
+  "bluemap": {
+    "api_commit": "285c9a60eff3ac2b0cab308ce1058d1565be0971",
+    "commit": "9be321df995a1103808621d529eb72773e719d4d",
+    "license": "MIT",
+    "redistributed": false,
+    "version": "5.22-agent.backport-5.22-mc1.21.1-2"
+  },
+  "pack": {
+    "commit": "c7bb230f21d14d26859d0b92548f089b3a493ad9",
+    "minecraft": "1.21.1",
+    "name": "All the Mons",
+    "neoforge": "21.1.248",
+    "version": "1.2.0"
+  },
+  "profile": "railcraft-1.2.10",
+  "schema": 1,
+  "source_use": "Runtime interfaces and installed resources may be interpreted only after family-specific evidence is recorded; no candidate classes, assets, binaries, source, or captured meshes are packaged."
+}

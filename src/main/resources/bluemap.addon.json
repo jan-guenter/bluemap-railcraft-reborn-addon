@@ -1,0 +1,6 @@
+{
+  "id": "bluemap-railcraft",
+  "entrypoint": "io.github.janguenter.bluemap.railcraft.BlueMapRailcraftAddon",
+  "dependencies": [],
+  "soft-dependencies": []
+}

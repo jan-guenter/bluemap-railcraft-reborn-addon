@@ -1,0 +1,379 @@
+{
+  "deterministic": true,
+  "family_id": "railcraft",
+  "generator": "bluemap-java21-addon-scaffold-v1",
+  "initial_files": [
+    {
+      "mode": "0644",
+      "path": ".gitattributes",
+      "sha256": "c0b5802900ed076871e7878f051eb2cd8d7918dbfada3f40f86300fa7325252d",
+      "size": 58
+    },
+    {
+      "mode": "0644",
+      "path": ".github/workflows/ci.yml",
+      "sha256": "6b6f32c2892fb030150d75da32d3bb8fc2267dd3da95aaa386b29e84681e152c",
+      "size": 4418
+    },
+    {
+      "mode": "0644",
+      "path": ".github/workflows/release.yml",
+      "sha256": "cd2f9b5ff0ac091c88e3237e05440b7a2463c47a8625e31a0f75592123bd2213",
+      "size": 6567
+    },
+    {
+      "mode": "0644",
+      "path": ".gitignore",
+      "sha256": "a5030053f21da04c319ab8abe4020d2ee1d488430e79f0b8ce04f1d7f29a93f6",
+      "size": 105
+    },
+    {
+      "mode": "0644",
+      "path": "AGENTS.md",
+      "sha256": "fcf4730c85ec0e74937c58e7497d857e099a7b087c4952337a56e1bc967eb47d",
+      "size": 2107
+    },
+    {
+      "mode": "0644",
+      "path": "CHANGELOG.md",
+      "sha256": "f1aeba4e69082a4a0b977c13cbda2c4cd25e1752f3dcd006470957eb0a2a2efb",
+      "size": 198
+    },
+    {
+      "mode": "0644",
+      "path": "LICENSE",
+      "sha256": "f079a10f7ddfae72170c16c8be18685f05e36309955c3858e9f863d4cae7cfce",
+      "size": 1068
+    },
+    {
+      "mode": "0644",
+      "path": "LICENSE-BlueMap",
+      "sha256": "f1c190d4a1ff29606cbed7a0d97fc7b7117cc2e1169e19caa753198957dbbfd6",
+      "size": 1122
+    },
+    {
+      "mode": "0644",
+      "path": "NOTICE.md",
+      "sha256": "eb604e6b9d99e9a7b76eff86a2e7a25efb58f97c808eba92318ffb5dbcda95d7",
+      "size": 431
+    },
+    {
+      "mode": "0644",
+      "path": "README.md",
+      "sha256": "7869110e21b75d7bd2b74a0bdae45ddee418ab77859f2deccce01d28cf27b3f0",
+      "size": 1542
+    },
+    {
+      "mode": "0644",
+      "path": "THIRD_PARTY.md",
+      "sha256": "929b482415b6db06d54c825475e12f1f9bc4a8756b78f568216cdf44b3a878db",
+      "size": 611
+    },
+    {
+      "mode": "0644",
+      "path": "build.gradle",
+      "sha256": "309896fc299630c503fe6af4d81460120d455383c01433ca36f68b174389a497",
+      "size": 19547
+    },
+    {
+      "mode": "0644",
+      "path": "config/checkstyle/checkstyle.xml",
+      "sha256": "77fe7b6d9a70f527daf7288ad2955e467f1059ef75b0c3d0d63694c8bea285d7",
+      "size": 791
+    },
+    {
+      "mode": "0644",
+      "path": "docs/EXECUTION.md",
+      "sha256": "a4619063941e70b33322d64f59d6ab7c3a888df3ed18bbaf8b14ffa747b58cea",
+      "size": 2054
+    },
+    {
+      "mode": "0644",
+      "path": "docs/RELEASING.md",
+      "sha256": "7488e66595e35648c172f99f43104e5dc8bdc99569a106b25bb628ef7f4b4b5d",
+      "size": 1522
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/README.md",
+      "sha256": "a1e205219a646d1b5001da0ec8e3da33422b36734aec10387bd4fa31d630ecd7",
+      "size": 668
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/SHA256SUMS",
+      "sha256": "0a1b683b0a82a3074a22339117158333eef6578604920d00ba59c13c32551944",
+      "size": 904
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/cases.py",
+      "sha256": "90313e20459c00658991f4d4e3ed76b95a107d716cf5312c5a865eb46b233d9e",
+      "size": 758
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/minecraft/tags/function/load.json",
+      "sha256": "2546d1d0d6508efdde9ef18ce335b94a1fc1d5cb968597d13513749c31147f4e",
+      "size": 51
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/railcraft_gallery/function/build.mcfunction",
+      "sha256": "44b23bf9a87fa046b1fdc1a1639e8ff922db1c6b61dc6acede54e77e1e6a7762",
+      "size": 200
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/railcraft_gallery/function/clear.mcfunction",
+      "sha256": "4507683d949af7e2312781de5e2ef0cb5d090ff6584e08f003a406bb4586b5d3",
+      "size": 91
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/railcraft_gallery/function/load.mcfunction",
+      "sha256": "9ddefa333d8dbdcbe2687d562fd777aacd17ec6b50cb3a2d1cd99a2188085cbe",
+      "size": 171
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/railcraft_gallery/function/release.mcfunction",
+      "sha256": "e7a131ba93f714022129b6a2266d63fc3dba385639a6495315d5c505e3fcdbd1",
+      "size": 82
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/railcraft_gallery/function/verify.mcfunction",
+      "sha256": "85eacaafb8afc2ce3ad5676f88a9a3657da438d7b6a22c5d7d8e90d3a0b4ed8b",
+      "size": 254
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/pack.mcmeta",
+      "sha256": "1f1e7e61114873e3efc03680a3560aa59e80c5950d1439ab7965f471a0f40ce5",
+      "size": 111
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/generate.py",
+      "sha256": "c81b1fb753ef653fe1e1396de91c09f495a6d1e5c841b5cfc242819ddade0baa",
+      "size": 4820
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/lint.py",
+      "sha256": "b970deb190d8597b0b0c07429be2898edd5bad6cef5c35e0f5b4bdfad7d58982",
+      "size": 2469
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/package.sh",
+      "sha256": "233443bdf46a0a6f1dac8c599d7732be80b5868279b927da033e614359e88c93",
+      "size": 1317
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/placements.tsv",
+      "sha256": "b56ee047c4aa36d26a7ca29b867a4bee61e3fa5aa25f0c4247ee46ca07cff797",
+      "size": 127
+    },
+    {
+      "mode": "0644",
+      "path": "gradle.properties",
+      "sha256": "c7f2ee1d7bf2efa30d1f702a7327e1e4c4c3e129ed9e7d054d973f2e5e208219",
+      "size": 605
+    },
+    {
+      "mode": "0644",
+      "path": "provenance/release.json",
+      "sha256": "51cfa9f1e32581760536ed1910fd7cbb7a55a91b78303209f89d447fd370271f",
+      "size": 372
+    },
+    {
+      "mode": "0644",
+      "path": "provenance/upstreams.json",
+      "sha256": "b37e04df81da192ef3fe2a8683a235a633ab3f02a06ac6e37634259154575ddf",
+      "size": 1454
+    },
+    {
+      "mode": "0644",
+      "path": "settings.gradle",
+      "sha256": "680bcfaaefef4782bb8ab39bd7ba852d811395fd8b3983c18cc89ff8bff395bd",
+      "size": 1435
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/railcraft/BlueMapRailcraftAddon.java",
+      "sha256": "07b6700f0cf552a418df9fca837dda6adc9b9947d52c50a8f6fadcb94d730fb4",
+      "size": 1557
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/railcraft/activation/AddonRuntime.java",
+      "sha256": "33268f06a9cbe5516e22e337b69638a3b975864373f59cc34e41a83f82b704dc",
+      "size": 2164
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/railcraft/adapter/bluemap522/AdapterCompatibility.java",
+      "sha256": "39f3e6a079be5780c81d874716b835b795a069cdcefb669e9b8c83109bca79eb",
+      "size": 1039
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/railcraft/adapter/bluemap522/BlueMap522Adapter.java",
+      "sha256": "2e463b864370483d4c1526affe61c25550872d6cddcef22e6c048b3e0e46e4cc",
+      "size": 1138
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/railcraft/adapter/bluemap522/ProfileResourceExtension.java",
+      "sha256": "bbda48ad556a9e2a5a6333be780ce57155656bd2d7481a1e0a613e1e00f0e190",
+      "size": 1699
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/railcraft/adapter/bluemap522/ProfileResourceExtensionType.java",
+      "sha256": "d748f2ae980923b40730e3de30a610672704ca7ce26a1e2245181e95b5339671",
+      "size": 924
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/railcraft/adapter/bluemap522/RegistryGuard.java",
+      "sha256": "5b3475452914fb98268ed9a98329d8f708c46959118d13daa7181cd6cecfb6f3",
+      "size": 876
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/railcraft/profile/ArtifactPin.java",
+      "sha256": "524ce08118233b95fbae8b6c6dc657381c5644b13747cfcbd576b4dbc8665006",
+      "size": 1371
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/railcraft/profile/ExactArtifactDetector.java",
+      "sha256": "11fc2d14e55e0cd97868fde92d4db60ec8dcdccdfd28f2f9dc6ef1322d524ed7",
+      "size": 9962
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/railcraft/profile/Railcraft121210Profile.java",
+      "sha256": "acc7dd45a6e2ebbabd1c8e3c4efc1e6fd58f29685a71031aebf3604162436733",
+      "size": 724
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/resources/bluemap.addon.json",
+      "sha256": "57d79926ff84acdb5f8b001091e5754e0a40dd12fdb2565a08aad4e6dc8a98d0",
+      "size": 161
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/railcraft/activation/AddonRuntimeTest.java",
+      "sha256": "595e0078334ff0faef84147b77892ddfc2764726f83ed034e9a98cb423e02999",
+      "size": 1075
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/railcraft/adapter/bluemap522/AdapterCompatibilityTest.java",
+      "sha256": "1944b7bf820baefac65244a583becec5b1943b74112b22098e70f8c0aa9233a9",
+      "size": 963
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/railcraft/profile/ExactArtifactDetectorTest.java",
+      "sha256": "5833fa4fa58bcbdc55fd07e68a749d9879b57a27802a08eca721926067141869",
+      "size": 3424
+    },
+    {
+      "mode": "0755",
+      "path": "tools/verify_pinned_artifacts.py",
+      "sha256": "dc7c6d80796f9d5773183a499aa61320a0126ac21f1fdb5c8e872bbf618ca798",
+      "size": 3508
+    },
+    {
+      "mode": "0755",
+      "path": "tools/verify_staged_equivalence.py",
+      "sha256": "cc8fa6cb1e79b85555b9f10920909b0c03fdc8d78445e07c877674e513fcff9f",
+      "size": 4441
+    }
+  ],
+  "repository": "bluemap-railcraft-reborn-addon",
+  "schema": 1,
+  "spec_sha256": "201866bfd0b422a034eaafa2d088a25bf6eded003aaa068473fe016d82cb86e3",
+  "steps": [
+    {
+      "description": "Validate the reviewed scaffold spec.",
+      "id": "validate-spec",
+      "number": 1,
+      "status": "complete"
+    },
+    {
+      "description": "Render and byte-audit the deterministic seed.",
+      "id": "render-seed",
+      "number": 2,
+      "status": "complete"
+    },
+    {
+      "description": "Initialize the independent child repository and feature branch.",
+      "id": "initialize-repository",
+      "number": 3,
+      "status": "pending"
+    },
+    {
+      "description": "Acquire exact candidate artifacts outside Git and verify their identities.",
+      "id": "acquire-artifacts",
+      "number": 4,
+      "status": "pending"
+    },
+    {
+      "description": "Verify Java 21 and exact BlueMap, API, pack, and loader pins.",
+      "id": "verify-baseline",
+      "number": 5,
+      "status": "pending"
+    },
+    {
+      "description": "Implement family-owned registration, profile, decoder, and renderer.",
+      "id": "implement-family",
+      "number": 6,
+      "status": "pending"
+    },
+    {
+      "description": "Add focused compatibility, decoder, geometry, and fallback tests.",
+      "id": "focused-tests",
+      "number": 7,
+      "status": "pending"
+    },
+    {
+      "description": "Replace the stock-only gallery with the smallest defect fixture.",
+      "id": "defect-gallery",
+      "number": 8,
+      "status": "pending"
+    },
+    {
+      "description": "Build a prototype and deploy it promptly to disposable staging.",
+      "id": "stage-prototype",
+      "number": 9,
+      "status": "pending"
+    },
+    {
+      "description": "Obtain owner comparison and visual acceptance in client and BlueMap.",
+      "id": "owner-acceptance",
+      "number": 10,
+      "status": "pending"
+    },
+    {
+      "description": "Seal staging and publication identities and run the release gate.",
+      "id": "seal-release",
+      "number": 11,
+      "status": "pending"
+    },
+    {
+      "description": "Merge, tag, publish, verify, and update root coordination.",
+      "id": "publish-coordinate",
+      "number": 12,
+      "status": "pending"
+    }
+  ],
+  "template_sha256": "96f6497d2ea982ea702c0208ddf202393bb331b1b24f6600bd9a328ca62f4540"
+}
