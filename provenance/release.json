@@ -1,10 +1,75 @@
 {
-  "accepted_staging_entries": null,
-  "final_release_artifacts": null,
-  "note": "Populate only after owner visual acceptance; this file is not packaged.",
-  "owner_accepted_staging": null,
-  "repository": "https://github.com/jan-guenter/bluemap-railcraft-reborn-addon",
   "schema_version": 1,
-  "status": "prototype-not-owner-accepted",
-  "version": "0.1.0-SNAPSHOT"
+  "status": "owner-accepted-release-candidate",
+  "version": "0.1.0-alpha.1",
+  "release_date": "2026-08-26",
+  "repository": "https://github.com/jan-guenter/bluemap-railcraft-reborn-addon",
+  "tag": "v0.1.0-alpha.1",
+  "maven_coordinate": "io.github.jan-guenter:bluemap-railcraft-reborn-addon:0.1.0-alpha.1",
+  "owner_accepted_staging": {
+    "accepted_at": "2026-08-26",
+    "commit": "82071127ba0c62a69bfb1c6f2acbf8e162103dd5",
+    "tree": "9b66f14a37d1fe0680560bb3adb4db78cd1de512",
+    "production_jar_size": 86865,
+    "production_jar_sha256": "2917c1fb5010336b07e093094afc4d89e8213b9dcda0d557100381bb9adaaac9",
+    "accepted_at_map": "railcraft_review",
+    "visual_acceptance": true
+  },
+  "accepted_staging_entries": {
+    "path": "provenance/accepted-staging-entries.sha256",
+    "entry_count": 30,
+    "sha256": "47daeef9eb07cce11378d7de9484fe0e2aa6636601ebca1ad71044eb53691c73"
+  },
+  "final_release_artifacts": {
+    "production_jar": {
+      "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.1.jar",
+      "size": 86864,
+      "sha256": "e4822c8756cada38958646a3b0c0e022d961b4549aa26254ebfc289a52190996"
+    },
+    "sources_jar": {
+      "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.1-sources.jar",
+      "size": 52388,
+      "sha256": "743f921a313c66349b6c961993d3f27db1e73df2d3687e1834eee595430f9353"
+    },
+    "pom": {
+      "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.1.pom",
+      "size": 1371,
+      "sha256": "cca8b30c15beee5eb328586155c591a57cca84b79dc268bf4715c151d94ac8e1"
+    },
+    "gradle_module": {
+      "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.1.module.json",
+      "size": 2880,
+      "sha256": "0c449f5a60a117cd579efd759c63afd0932906f0d7fb6b81baf67d450a416b92"
+    }
+  },
+  "staged_equivalence": {
+    "entry_manifest": "provenance/accepted-staging-entries.sha256",
+    "identical_non_manifest_entries": 30,
+    "whole_jar_byte_identical": false,
+    "only_changed_entry_bytes": "META-INF/MANIFEST.MF",
+    "change_reason": "Implementation-Version changed from the accepted SNAPSHOT marker to the final release version."
+  },
+  "gallery": {
+    "archive_file_name": "railcraft-void-chest-gallery.zip",
+    "size": 2237,
+    "sha256": "d89af4bcb32d63528fc96c4604f24ebf243e47f9da491cdbd9cdc81616a0edda",
+    "review_cases": 9,
+    "published_as_release_asset": false
+  },
+  "ephemeral_ci_inputs": {
+    "railcraft": {
+      "curseforge_project": 901491,
+      "curseforge_file": 7393678,
+      "size": 5290986,
+      "sha256": "7de3dfeac277da57f9897822824332c99e53b9d36956143b38c0966f39144328"
+    },
+    "policy": "Downloaded only into the ephemeral runner, verified before use, and never bundled or uploaded."
+  },
+  "verification": {
+    "production_jar_exact_byte_gate": true,
+    "sources_jar_exact_byte_gate": true,
+    "publication_metadata_exact_byte_gate": true,
+    "staged_equivalence_gate": true,
+    "exact_input_gate": true
+  }
 }

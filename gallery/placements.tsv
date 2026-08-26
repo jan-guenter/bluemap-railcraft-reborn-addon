@@ -1,2 +1,10 @@
 case_id	label	x	y	z	block_state	expected
-stock-control	stone stock rendering control	176	100	175	minecraft:stone	stock-visible
+void-chest-north-dry	north-facing dry void chest	164	100	164	railcraft:void_chest[facing=north,waterlogged=false]	custom-visible
+void-chest-east-dry	east-facing dry void chest	168	100	164	railcraft:void_chest[facing=east,waterlogged=false]	custom-visible
+void-chest-south-dry	south-facing dry void chest	172	100	164	railcraft:void_chest[facing=south,waterlogged=false]	custom-visible
+void-chest-west-dry	west-facing dry void chest	176	100	164	railcraft:void_chest[facing=west,waterlogged=false]	custom-visible
+void-chest-north-waterlogged	north-facing waterlogged void chest	164	100	168	railcraft:void_chest[facing=north,waterlogged=true]	custom-visible
+void-chest-east-waterlogged	east-facing waterlogged void chest	168	100	168	railcraft:void_chest[facing=east,waterlogged=true]	custom-visible
+void-chest-south-waterlogged	south-facing waterlogged void chest	172	100	168	railcraft:void_chest[facing=south,waterlogged=true]	custom-visible
+void-chest-west-waterlogged	west-facing waterlogged void chest	176	100	168	railcraft:void_chest[facing=west,waterlogged=true]	custom-visible
+vanilla-single-chest-control	north-facing vanilla single-chest control	180	100	164	minecraft:chest[facing=north,type=single,waterlogged=false]	stock-visible
