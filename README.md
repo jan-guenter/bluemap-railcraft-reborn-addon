@@ -3,11 +3,9 @@
 A Java 21 BlueMap add-on for the exact `railcraft-1.2.10` profile in All the Mons
 `1.2.0` / Minecraft `1.21.1`.
 
-Status: safe generated prototype. The exact artifact gate and BlueMap 5.22
-adapter compile, but the family-owned renderer is intentionally absent.
-BlueMap therefore retains stock rendering until the explicit
-`SCAFFOLD_NOT_IMPLEMENTED` markers are replaced. A release cannot pass while
-those markers remain.
+Status: visual-review prototype. The exact artifact gate and BlueMap 5.22
+adapter replace the geometry-free void-chest resource model with a stable,
+closed single-chest mesh and the operator-installed Railcraft texture.
 
 ## Build
 
@@ -30,10 +28,11 @@ Set `-Dbluemap.railcraft.disabled=true` to leave the exact profile inactive.
 
 ## Scope boundary
 
-The initial implementation must be limited to a small observed BlueMap defect.
-Live contents, fill levels, activity overlays, particles, animation phase, and
-unsupported states stay stock or deterministic-neutral unless the owner
-explicitly expands scope.
+The first profile owns only `railcraft:void_chest`. It renders all horizontal
+facings and both waterlogged values with the same closed shape. Inventory and
+lid animation do not affect the static map. Tanks, turbines, signals and their
+live contents or activity remain stock until a comparison proves another
+material defect.
 
 No Railcraft Reborn binary, source, class, asset, captured mesh, or gallery is
 bundled in the add-on.

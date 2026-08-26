@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "renderer": "bluemap_railcraft:void_chest",
+      "model": "bluemap:block/missing"
+    }
+  }
+}

@@ -5,11 +5,14 @@
 package io.github.janguenter.bluemap.railcraft.profile;
 
 import java.util.List;
+import java.util.Set;
 
 /** Exact All the Mons 1.2.0 profile `railcraft-1.2.10`. */
 public final class Railcraft121210Profile {
 
     public static final String PROFILE_ID = "railcraft-1.2.10";
+    public static final String VOID_CHEST_ID = "railcraft:void_chest";
+    public static final Set<String> OWNED_BLOCKS = Set.of(VOID_CHEST_ID);
     public static final List<ArtifactPin> ARTIFACTS = List.of(
             new ArtifactPin(
                     "railcraft",
@@ -22,5 +25,9 @@ public final class Railcraft121210Profile {
     );
 
     private Railcraft121210Profile() {
+    }
+
+    public static boolean owns(String blockId) {
+        return OWNED_BLOCKS.contains(blockId);
     }
 }

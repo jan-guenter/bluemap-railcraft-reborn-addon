@@ -6,14 +6,27 @@ package io.github.janguenter.bluemap.railcraft.adapter.bluemap522;
 
 import de.bluecolored.bluemap.core.resources.pack.resourcepack.ResourcePack;
 import de.bluecolored.bluemap.core.resources.pack.resourcepack.ResourcePackExtension;
+import de.bluecolored.bluemap.core.resources.pack.resourcepack.blockstate.VariantSet;
+import de.bluecolored.bluemap.core.resources.pack.resourcepack.blockstate.Variants;
+import de.bluecolored.bluemap.core.resources.pack.resourcepack.texture.Texture;
+import de.bluecolored.bluemap.core.util.Key;
+import de.bluecolored.bluemap.core.world.BlockProperties;
+import de.bluecolored.bluemap.core.world.BlockState;
 import io.github.janguenter.bluemap.railcraft.activation.AddonRuntime;
 import io.github.janguenter.bluemap.railcraft.profile.ExactArtifactDetector;
 import io.github.janguenter.bluemap.railcraft.profile.Railcraft121210Profile;
 
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.nio.file.Path;
+import java.util.Set;
 
-/** Exact-artifact admission hook; family routing deliberately remains stock. */
+/** Exact-artifact admission, resource validation and void-chest routing hook. */
 final class ProfileResourceExtension implements ResourcePackExtension {
+
+    static final Key SYNTHETIC_VOID_CHEST = Key.parse("bluemap_railcraft:void_chest");
+    static final Key VOID_CHEST_TEXTURE = Key.parse("railcraft:entity/chest/void_chest");
+    static final Set<Key> REQUIRED_TEXTURES = Set.of(VOID_CHEST_TEXTURE);
 
     private final ResourcePack resourcePack;
     private final AddonRuntime runtime;
@@ -34,12 +47,69 @@ final class ProfileResourceExtension implements ResourcePackExtension {
             return;
         }
 
-        // SCAFFOLD_NOT_IMPLEMENTED: validate installed resources, register the
-        // family renderer, route only owned hosts, then call runtime.activate().
-        if (resourcePack.getBlockStates() == null) {
-            runtime.fail("resource-pack-unavailable");
+        if (!validDispatch(resourcePack.getBlockStates().get(SYNTHETIC_VOID_CHEST))) {
+            runtime.inactive("synthetic-dispatch-invalid");
             return;
         }
-        runtime.inactive("family-renderer-not-implemented");
+        runtime.activate();
+    }
+
+    @Override
+    public Set<Key> collectUsedTextureKeys() {
+        return runtime.active() ? REQUIRED_TEXTURES : Set.of();
+    }
+
+    @Override
+    public void bake() {
+        if (!runtime.active()) {
+            return;
+        }
+        try {
+            if (!validTexture(VOID_CHEST_TEXTURE)) {
+                runtime.inactive("void-chest-texture-invalid");
+                return;
+            }
+        } catch (IOException | RuntimeException exception) {
+            runtime.inactive("void-chest-texture-unreadable");
+            return;
+        }
+        System.out.println("BlueMap Railcraft add-on active: routed exact closed void chest.");
+    }
+
+    @Override
+    public Key getBlockStateKey(Key key) {
+        return runtime.active() && Railcraft121210Profile.owns(key.getFormatted())
+                ? SYNTHETIC_VOID_CHEST : key;
+    }
+
+    @Override
+    public void getBlockProperties(BlockState state, BlockProperties.Builder builder) {
+        if (runtime.active() && Railcraft121210Profile.owns(state.getId().getFormatted())) {
+            builder.culling(false).cullingIdentical(false);
+        }
+    }
+
+    private boolean validTexture(Key key) throws IOException {
+        Texture texture = resourcePack.getTextures().get(key);
+        if (texture == null || texture.getAnimation() != null) {
+            return false;
+        }
+        BufferedImage image = texture.getTextureImage();
+        return image != null && image.getWidth() == 64 && image.getHeight() == 64;
+    }
+
+    private static boolean validDispatch(
+            de.bluecolored.bluemap.core.resources.pack.resourcepack.blockstate.BlockState state
+    ) {
+        if (state == null || state.getMultipart() != null) {
+            return false;
+        }
+        Variants variants = state.getVariants();
+        if (variants == null || variants.getDefaultVariant() == null) {
+            return false;
+        }
+        VariantSet set = variants.getDefaultVariant();
+        return set.getVariants().length == 1
+                && BlueMap522Adapter.isExpectedDispatch(set.getVariants()[0]);
     }
 }
