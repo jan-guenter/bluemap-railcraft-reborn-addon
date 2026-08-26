@@ -75,7 +75,7 @@ final class RailcraftVoidChestRenderer implements BlockRenderer {
             if (texture == null) {
                 throw new IllegalStateException("void-chest texture disappeared");
             }
-            mapColor.set(texture.getColorStraight());
+            mapColor.set(texture.getColorStraight()).flatten();
         } catch (MaxCapacityReachedException exception) {
             resetPartialGeometry(target, start, mapColor, initialMapColor);
             throw exception;
