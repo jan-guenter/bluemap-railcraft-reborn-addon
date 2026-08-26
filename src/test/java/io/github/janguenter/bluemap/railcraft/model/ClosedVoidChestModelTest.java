@@ -26,6 +26,12 @@ class ClosedVoidChestModelTest {
                         && vertex.u() >= 0F && vertex.u() <= 1F
                         && vertex.v() >= 0F && vertex.v() <= 1F
         ));
+        assertEquals(9F / 16F, partMinimumY(quads.subList(0, 6)));
+        assertEquals(14F / 16F, partMaximumY(quads.subList(0, 6)));
+        assertEquals(7F / 16F, partMinimumY(quads.subList(6, 12)));
+        assertEquals(11F / 16F, partMaximumY(quads.subList(6, 12)));
+        assertEquals(0F, partMinimumY(quads.subList(12, 18)));
+        assertEquals(10F / 16F, partMaximumY(quads.subList(12, 18)));
     }
 
     @Test
@@ -59,6 +65,16 @@ class ClosedVoidChestModelTest {
 
     private static float coordinate(ClosedVoidChestModel.Vertex vertex, Axis axis) {
         return axis == Axis.X ? vertex.x() : vertex.z();
+    }
+
+    private static float partMinimumY(List<ClosedVoidChestModel.Quad> quads) {
+        return quads.stream().flatMap(quad -> quad.vertices().stream())
+                .map(ClosedVoidChestModel.Vertex::y).min(Float::compare).orElseThrow();
+    }
+
+    private static float partMaximumY(List<ClosedVoidChestModel.Quad> quads) {
+        return quads.stream().flatMap(quad -> quad.vertices().stream())
+                .map(ClosedVoidChestModel.Vertex::y).max(Float::compare).orElseThrow();
     }
 
     private enum Axis {

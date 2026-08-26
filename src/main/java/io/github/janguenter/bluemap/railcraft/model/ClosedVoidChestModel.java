@@ -31,8 +31,8 @@ public final class ClosedVoidChestModel {
 
     private static List<Quad> buildSouth() {
         List<Quad> quads = new ArrayList<>(18);
-        addCube(quads, 0F, 0F, 1F, 10F, 1F, 14F, 5F, 14F);
-        addCube(quads, 0F, 0F, 7F, 8F, 15F, 2F, 4F, 1F);
+        addCube(quads, 0F, 0F, 1F, 9F, 1F, 14F, 5F, 14F);
+        addCube(quads, 0F, 0F, 7F, 7F, 15F, 2F, 4F, 1F);
         addCube(quads, 0F, 19F, 1F, 0F, 1F, 14F, 10F, 14F);
         return List.copyOf(quads);
     }
