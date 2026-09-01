@@ -6,7 +6,8 @@ A Java 21 BlueMap add-on for the exact `railcraft-1.2.10` profile in All the Mon
 Status: unpublished `0.1.0-alpha.2` BlueMap 5.23 migration candidate. It
 preserves the owner-accepted alpha.1 void-chest renderer, profile, gallery, and
 fallback behavior while moving shared compatibility helpers into the pinned
-Adapter API.
+Adapter API. The exact production JAR is 90,896 bytes with SHA-256
+`3741ddb3bf61c7c3512a7b52c3757aeaa2dfd1a1ffabd5cf605c3e73ddc85db5`.
 
 ## Build
 

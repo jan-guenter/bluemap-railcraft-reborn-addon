@@ -33,23 +33,23 @@
   "candidate_artifacts": {
     "production_jar": {
       "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.2.jar",
-      "size": 0,
-      "sha256": "PENDING"
+      "size": 90896,
+      "sha256": "3741ddb3bf61c7c3512a7b52c3757aeaa2dfd1a1ffabd5cf605c3e73ddc85db5"
     },
     "sources_jar": {
       "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.2-sources.jar",
-      "size": 0,
-      "sha256": "PENDING"
+      "size": 56664,
+      "sha256": "e76715356b160664d1ed75868ff4c6f48ad13766bb466a289f79a9fbea0cee44"
     },
     "pom": {
       "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.2.pom",
-      "size": 0,
-      "sha256": "PENDING"
+      "size": 1371,
+      "sha256": "92c611b8a2d44d88f855f5934512872eece7be5b157683bcf05f4fe9d69ff8ef"
     },
     "gradle_module": {
       "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.2.module.json",
-      "size": 0,
-      "sha256": "PENDING"
+      "size": 2880,
+      "sha256": "ecb9bfc59f590f9cba87f9fef3e93c87f06f29740fc66c62a83918adcd29b6a9"
     }
   },
   "preserved_contract": {
@@ -64,11 +64,12 @@
     "railcraft_sha256": "7de3dfeac277da57f9897822824332c99e53b9d36956143b38c0966f39144328"
   },
   "verification": {
-    "exact_input_gate": false,
-    "adapter_api_gitlink_and_source_tree_gate": false,
-    "production_archive_boundary_gate": false,
-    "sources_archive_boundary_gate": false,
-    "local_candidate_artifact_identity_gate": false,
+    "exact_input_gate": true,
+    "adapter_api_gitlink_and_source_tree_gate": true,
+    "production_archive_boundary_gate": true,
+    "sources_archive_boundary_gate": true,
+    "local_candidate_artifact_identity_gate": true,
+    "gradle_9_6_1_clean_builds_byte_identical": true,
     "authoritative_pr_ci_reproduction": false,
     "local_gradle_version": "9.6.1",
     "local_java_runtime": "21.0.12.1+1",
