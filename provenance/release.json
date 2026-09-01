@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "unpublished-migration-candidate",
+  "status": "owner-accepted-release-candidate",
   "published": false,
   "version": "0.1.0-alpha.2",
   "release_date": "2026-09-01",
@@ -70,9 +70,56 @@
     "sources_archive_boundary_gate": true,
     "local_candidate_artifact_identity_gate": true,
     "gradle_9_6_1_clean_builds_byte_identical": true,
-    "authoritative_pr_ci_reproduction": false,
+    "authoritative_pr_ci_reproduction": true,
     "local_gradle_version": "9.6.1",
     "local_java_runtime": "21.0.12.1+1",
-    "exact_alpha_2_runtime_review": false
+    "exact_alpha_2_runtime_review": true
+  },
+  "owner_accepted_staging": {
+    "visual_acceptance": true,
+    "accepted_on": "2026-09-02",
+    "scope": "Owner accepted the Railcraft Reborn gallery in the combined 51-add-on BlueMap 5.23 integration review. The accepted renderer, profile, texture, and gallery are the alpha.2 candidate bytes; the aggregate staging JAR differs only at the integration entrypoint overlay.",
+    "integration_run": "bluemap-atmons-integration-20260901-next-review-batch-v39",
+    "candidate_manifest": {
+      "sha256": "3ddf4c4989bf2eca1b3207f32428c67343d82a32e21002c3767b14d765808f55",
+      "local_candidate_base_source_commit": "1d59509c01c20201ea80bafa4ae1841598cd2770",
+      "local_candidate_base_artifact": {
+        "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.2.jar",
+        "size": 90896,
+        "sha256": "3741ddb3bf61c7c3512a7b52c3757aeaa2dfd1a1ffabd5cf605c3e73ddc85db5"
+      },
+      "aggregate_staging_artifact": {
+        "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.1.jar",
+        "size": 91267,
+        "sha256": "90b2033a305cdfa753c2c257336aa7d23e3c6738a3afdd6666df659949aa065f"
+      }
+    },
+    "browser_capture": {
+      "file_name": "v39-railcraft-reborn-sanity-20260901.png",
+      "size": 626954,
+      "sha256": "0f76e4e37308bd69ff957cc4bb5aedfa1716dd3cfa63ff9ca8f9d90b0a5512b6"
+    }
+  },
+  "final_release_artifacts": {
+    "production_jar": {
+      "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.2.jar",
+      "size": 90896,
+      "sha256": "3741ddb3bf61c7c3512a7b52c3757aeaa2dfd1a1ffabd5cf605c3e73ddc85db5"
+    },
+    "sources_jar": {
+      "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.2-sources.jar",
+      "size": 56664,
+      "sha256": "e76715356b160664d1ed75868ff4c6f48ad13766bb466a289f79a9fbea0cee44"
+    },
+    "pom": {
+      "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.2.pom",
+      "size": 1371,
+      "sha256": "92c611b8a2d44d88f855f5934512872eece7be5b157683bcf05f4fe9d69ff8ef"
+    },
+    "gradle_module": {
+      "file_name": "bluemap-railcraft-reborn-addon-0.1.0-alpha.2.module.json",
+      "size": 2880,
+      "sha256": "ecb9bfc59f590f9cba87f9fef3e93c87f06f29740fc66c62a83918adcd29b6a9"
+    }
   }
 }
