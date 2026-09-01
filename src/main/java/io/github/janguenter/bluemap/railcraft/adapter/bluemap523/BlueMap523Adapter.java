@@ -2,16 +2,19 @@
  * SPDX-License-Identifier: MIT
  */
 
-package io.github.janguenter.bluemap.railcraft.adapter.bluemap522;
+package io.github.janguenter.bluemap.railcraft.adapter.bluemap523;
 
 import de.bluecolored.bluemap.core.map.hires.block.BlockRendererType;
 import de.bluecolored.bluemap.core.resources.pack.resourcepack.ResourcePack;
-import de.bluecolored.bluemap.core.resources.pack.resourcepack.blockstate.Variant;
+import de.bluecolored.bluemap.core.resources.pack.resourcepack.blockstate.BlockState;
 import de.bluecolored.bluemap.core.util.Key;
+import io.github.janguenter.bluemap.addon.adapter.api.bluemap523.RegistryGuard;
+import io.github.janguenter.bluemap.addon.adapter.api.bluemap523.ResourceExtensionType;
+import io.github.janguenter.bluemap.addon.adapter.api.bluemap523.SyntheticDispatch;
 import io.github.janguenter.bluemap.railcraft.activation.AddonRuntime;
 
-/** BlueMap 5.22 registration boundary. Family renderer registrations go here. */
-public final class BlueMap522Adapter {
+/** Exact BlueMap 5.23 feature-backport registration boundary. */
+public final class BlueMap523Adapter {
 
     private static final AddonRuntime RUNTIME = AddonRuntime.INSTANCE;
     private static final BlockRendererType VOID_CHEST_RENDERER = new BlockRendererType.Impl(
@@ -21,9 +24,12 @@ public final class BlueMap522Adapter {
             )
     );
     private static final ResourcePack.Extension<ProfileResourceExtension> EXTENSION =
-            new ProfileResourceExtensionType(RUNTIME);
+            new ResourceExtensionType<>(
+                    Key.parse("bluemap_railcraft:exact_profile"),
+                    pack -> new ProfileResourceExtension(pack, RUNTIME)
+            );
 
-    private BlueMap522Adapter() {
+    private BlueMap523Adapter() {
     }
 
     /** Registers the exact void-chest renderer and its fail-closed resource route. */
@@ -41,12 +47,7 @@ public final class BlueMap522Adapter {
         return true;
     }
 
-    static boolean isExpectedDispatch(Variant variant) {
-        return variant != null
-                && variant.getRenderer() == VOID_CHEST_RENDERER
-                && ResourcePack.MISSING_BLOCK_MODEL.equals(variant.getModel())
-                && !variant.isTransformed()
-                && !variant.isUvlock()
-                && Double.compare(variant.getWeight(), 1D) == 0;
+    static boolean isExpectedDispatch(BlockState state) {
+        return SyntheticDispatch.matches(state, VOID_CHEST_RENDERER);
     }
 }
